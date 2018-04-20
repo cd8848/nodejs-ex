@@ -28,8 +28,8 @@ var vd = [
 ["LuaJit", "http://luajit.org/download.html", /LuaJIT-([0-9.]+)/],
 ["Python", "https://www.python.org/downloads/", /Download Python ([0-9.]+)/],
 ["FreeBasic", "https://sourceforge.net/projects/fbc/files/", /Windows\/FreeBASIC-([0-9.]+)-win/],
-["FreePascal", "http://freepascal.org/", /Version <em>([0-9.]+)/],
-["Scite", "http://www.scintilla.org/SciTEDownload.html", /Release ([0-9.]+)/],
+["FreePascal", "https://freepascal.org/", /Version <em>([0-9.]+)/],
+["Scite", "https://www.scintilla.org/SciTEDownload.html", /Release ([0-9.]+)/],
 ["FASM", "http://flatassembler.net/download.php", /assembler ([0-9.]+) for/],
 ["TotalCmd", "http://www.ghisler.com/whatsnew.htm", /Total Commander ([0-9.]+\w*) /],
 ["TakeCommand", "https://jpsoft.com/all-downloads/downloads.html", />(\d\d\.\d\d\ Build[^<]+)/]
