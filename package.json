@@ -4,23 +4,23 @@
   "description": "Node.js sample app for OpenShift 3",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.13.4",
+    "express": "^4.13.4"
   },
   "engine": {
     "node": "*",
     "npm": "*"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/cd8848/nodejs-ex.git"
+    "url": "http://github.com/openshift/nodejs-ex.git"
   },
-  "author": "cd8848 <cd8848@outlook.com>",
+  "author": "Steve Speicher <sspeiche@gmail.com>",
   "license": "CC-BY-1.0",
   "bugs": {
-    "url": "http://github.com/cd8848/nodejs-ex/issues"
+    "url": "http://github.com/openshift/nodejs-ex/issues"
   },
-  "homepage": "http://github.com/cd8848/nodejs-ex"
+  "homepage": "http://github.com/openshift/nodejs-ex"
 }
