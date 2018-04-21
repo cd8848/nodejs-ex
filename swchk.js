@@ -1,9 +1,11 @@
 var http = require('http')
 var https = require('https')
+var fs = require('fs')
 function swchk() {
   return new Promise((resolve,reject)=>{
     Promise.all(pa)
     .then( (arr)=>{
+      if (chg) fs.writeFileSync(swver,JSON.stringify(va))
       resolve(arr.join('<br>'))
     }).catch((e)=>{
       reject(e)
@@ -41,7 +43,15 @@ function chkVer(name,url,re) {
       })
       res.on('end',()=>{
         let m = re.exec(h)
-         resolve( name +': '+ (m ? m[1] : 'Error') )
+        if(m) {
+          m = m[1]
+          if( va[name] != m ) {
+            va[name] = m
+            chg = true
+            m += ' New!'
+          }
+        } else m = 'Error'
+        resolve( name +': '+ m )
       })
       res.on('error',(e)=> {
         reject(e)
@@ -50,6 +60,10 @@ function chkVer(name,url,re) {
   })
 }
 
+var chg = false
+var swver = 'swver.json'
+var va = {}
+if( fs.existsSync(swver) ) va = JSON.parse(fs.readFileSync(swver))
 var pa = vd.map( (e)=> {
   return chkVer(e[0],e[1],e[2])
 })
